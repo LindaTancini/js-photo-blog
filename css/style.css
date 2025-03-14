@@ -53,7 +53,7 @@ h1 {
   position: absolute;
   height: 30px;
   top: -15px;
-  left: 0;
+  left: 50%;
 }
 
 .caption {
