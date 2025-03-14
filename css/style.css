@@ -1,6 +1,6 @@
 /* COMMON */
 body {
-  background-color: pink;
+  background-image: url(/img/cork.png);
   text-align: center;
 }
 
@@ -21,4 +21,13 @@ body {
 h1 {
   font-family: "Edu TAS Beginner", sans-serif;
   font-size: 32px;
+}
+
+/* CONTAINER POLAROID */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1390px;
+  margin: 0 auto;
 }
