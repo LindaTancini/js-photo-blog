@@ -9,3 +9,16 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* TITOLO */
+
+#title {
+  background-image: url(/img/wall.png);
+  padding: 40px;
+  background-size: 20%;
+}
+
+h1 {
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-size: 32px;
+}
