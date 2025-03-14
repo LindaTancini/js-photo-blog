@@ -11,8 +11,8 @@ axios
     console.log(arrayElementAPI);
     // CREO UNA VARIABILE CHE CONTERRA' IL CONTENUTO DA METTERE  NELL'HTML
     let newPolaroid = "";
-    // CICLO FOR PER PRENDERE ELEMENTI NELL'ARRAY API, PARTO DA INDICE 1 PER AVERE 6 ELEMENTI IN PAGINA
-    for (let i = 1; i < arrayElementAPI.length; i++) {
+    // CICLO FOR PER PRENDERE ELEMENTI NELL'ARRAY API
+    for (let i = 0; i < arrayElementAPI.length; i++) {
       // SALVO IL SUO INDICE IN UNA VARIABILE
       const element = arrayElementAPI[i];
       // DENTRO LA VARIABILE CHE HO CREATO, METTO DENTRO LA STRUTTURA HTML
