@@ -20,7 +20,8 @@ body {
 
 h1 {
   font-family: "Edu TAS Beginner", sans-serif;
-  font-size: 32px;
+  font-style: bold;
+  font-size: 40px;
 }
 
 /* CONTAINER POLAROID */
@@ -53,7 +54,7 @@ h1 {
   position: absolute;
   height: 30px;
   top: -15px;
-  left: 50%;
+  left: 45%;
 }
 
 .caption {
