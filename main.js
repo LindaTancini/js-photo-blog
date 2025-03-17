@@ -26,6 +26,17 @@ axios
     }
     // A CICLO TERMINATO, STAMPO IN PAGINA HTML AGGIUNGENDO GIA' ALLA POLAROID PRESENTE USANDO +=
     containerElement.innerHTML += newPolaroid;
+    // PRENDO ELEMENTO DELLE FOTO, LO AGGIUNGO DENTRO DOVE RICEVO I DATI DELLE API DA AXIOS
+    const photoElement = document.querySelectorAll(".photo");
+    console.log(photoElement);
+    // CICLO FOR PER AGGIUNGERE L'EVENT LISTENER A TUTTE LE FOTO
+    for (let i = 0; i < photoElement.length; i++) {
+      const photo = photoElement[i];
+
+      photo.addEventListener("click", function () {
+        console.log("Ho cliccato sulla foto");
+      });
+    }
   })
   .catch((error) => {
     console.error("error");
