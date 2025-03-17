@@ -70,6 +70,10 @@ h1 {
   width: 30%;
 }
 
+#overlay.hidden {
+  display: none;
+}
+
 #overlay {
   position: fixed;
   top: 50%;
