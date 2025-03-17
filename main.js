@@ -42,6 +42,8 @@ axios
         // SE L'ELEMENTO OVERLAY CONTIENE LA CLASSE HIDDEN LA RIMUOVO
         if (overlayElement.classList.contains("hidden")) {
           overlayElement.classList.remove("hidden");
+          // FACCIO IN MODO CHE L'IMMAGINE CHE COMPARE IN OVERLAY SIA UGUALE ALL'IMMAGINE DELL'API TRAMITE IL LORO SRC
+          imgOverlayElement.src = photo.src;
         } else {
           // INVECE SE L'OVERLAY E' VISIBILE, LO NASCONDO
           overlayElement.classList.add("hidden");
