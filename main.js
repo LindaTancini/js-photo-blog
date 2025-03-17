@@ -30,3 +30,14 @@ axios
   .catch((error) => {
     console.error("error");
   });
+
+// PRENDO GLI ELEMENTI IN PAGINA PER APRIRE E CHIUDERE L'OVERLAY
+// PRENDO ELEMENTO OVERLAY
+const overlayElement = document.getElementById("overlay");
+console.log(overlayElement);
+// PRENDO ELEMENTO BOTTONE
+const buttonElement = document.querySelector(".btn-close");
+console.log(buttonElement);
+// PRENDO ELEMENTO IMG OVERLAY
+const imgOverlayElement = document.querySelector(".img-overlay");
+console.log(imgOverlayElement);
