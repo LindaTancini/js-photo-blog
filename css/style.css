@@ -42,12 +42,28 @@ h1 {
   padding: 10px;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  /* TRANSIZIONE FLUIDA CHE AVVIENE IN 0.3 SECONDI */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo {
   width: 100%;
   display: block;
+}
+
+/* EFFETTO HOVER*/
+.polaroid:hover {
+  /* CON SCALE INGRADISCO L'IMG DEL 10% QUANDO CI PASSO COL MOUSE */
+  /* CON ROTATE RUOTO L'IMG IN SENSO ORARIO DI 10 GRADI QUANDO CI PASSO COL MOUSE */
+  transform: scale(1.1) rotate(10deg);
+  /* AUMENTO IL COLORE E LE DIMENSIONI DELL'OMBRA ATTORNO ALLA POLAROID */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+/* PASSANDO COL MUOSE SULLA POLAROID, IL PIN SCOMPARE */
+.polaroid:hover .pin {
+  display: none;
 }
 
 .pin {
