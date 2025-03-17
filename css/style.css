@@ -83,4 +83,22 @@ h1 {
   /* DIMENSIONI OPACITA' */
   width: 100%;
   height: 100%;
+  /* CENTRO CON DISPLAY FLEX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-close {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  /* CENTRO IL BOTTONE ORRIZONTALMENTE CON TRANSLATEX*/
+  transform: translateX(-50%);
+  z-index: 15;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
