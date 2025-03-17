@@ -35,6 +35,12 @@ axios
 
       photo.addEventListener("click", function () {
         console.log("Ho cliccato sulla foto");
+        if (overlayElement.classList.contains("hidden")) {
+          overlayElement.classList.remove("hidden");
+        } else {
+          // INVECE SE L'OVERLAY E' VISIBILE, LO NASCONDO
+          overlayElement.classList.add("hidden");
+        }
       });
     }
   })
@@ -52,3 +58,10 @@ console.log(buttonElement);
 // PRENDO ELEMENTO IMG OVERLAY
 const imgOverlayElement = document.querySelector(".img-overlay");
 console.log(imgOverlayElement);
+
+// AGGIUNGO L'EVENTO PER CHIUDERE L'OVERLAY
+buttonElement.addEventListener("click", function () {
+  // NASCONDO L'OVERLAY
+  console.log("ho cliccato sul bottone");
+  overlayElement.classList.add("hidden");
+});
