@@ -1,8 +1,12 @@
-console.log("Ciao Linda");
-
 //PRENDO ELEMENTO CONTAINER
 const containerElement = document.getElementById("container");
-console.log(containerElement);
+// PRENDO GLI ELEMENTI IN PAGINA PER APRIRE E CHIUDERE L'OVERLAY
+// PRENDO ELEMENTO OVERLAY
+const overlayElement = document.getElementById("overlay");
+// PRENDO ELEMENTO BOTTONE
+const buttonElement = document.querySelector(".btn-close");
+// PRENDO ELEMENTO IMG OVERLAY
+const imgOverlayElement = document.querySelector(".img-overlay");
 // PRENDO I DATI API DA POSTMAN
 axios
   .get("https://lanciweb.github.io/demo/api/pictures/")
@@ -32,9 +36,10 @@ axios
     // CICLO FOR PER AGGIUNGERE L'EVENT LISTENER A TUTTE LE FOTO
     for (let i = 0; i < photoElement.length; i++) {
       const photo = photoElement[i];
-
+      // FACCIO IN MODO CHE LA FOTO SIA CLICCABILE CON EVENT LISTENER
       photo.addEventListener("click", function () {
         console.log("Ho cliccato sulla foto");
+        // SE L'ELEMENTO OVERLAY CONTIENE LA CLASSE HIDDEN LA RIMUOVO
         if (overlayElement.classList.contains("hidden")) {
           overlayElement.classList.remove("hidden");
         } else {
@@ -44,20 +49,10 @@ axios
       });
     }
   })
+  //ERRORE, CONSOLE LOG VISIBILE IN CASO DI ERRORE DEL CARICAMENTO DELLA PAGINA
   .catch((error) => {
     console.error("error");
   });
-
-// PRENDO GLI ELEMENTI IN PAGINA PER APRIRE E CHIUDERE L'OVERLAY
-// PRENDO ELEMENTO OVERLAY
-const overlayElement = document.getElementById("overlay");
-console.log(overlayElement);
-// PRENDO ELEMENTO BOTTONE
-const buttonElement = document.querySelector(".btn-close");
-console.log(buttonElement);
-// PRENDO ELEMENTO IMG OVERLAY
-const imgOverlayElement = document.querySelector(".img-overlay");
-console.log(imgOverlayElement);
 
 // AGGIUNGO L'EVENTO PER CHIUDERE L'OVERLAY
 buttonElement.addEventListener("click", function () {
